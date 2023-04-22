@@ -1,0 +1,61 @@
+
+#form{
+    position: absolute;
+    left: 21cm;
+    width:9cm;
+    height:10cm;
+    margin-top: 4cm;
+    background-color: rgb(250, 169, 181);
+    border: 1px solid black;
+    border-radius: 33px;
+
+}
+.input{width: 6cm;
+margin-top: 0.8cm;
+height: 1cm;
+position: relative;
+left: 1cm;}
+#button-Login{
+    position: relative;
+    width: 3cm;
+    height:1cm;
+    margin-top: 1cm;
+    position: relative;
+    left: 3cm;
+}
+h1{position: relative;
+color:rgb(134, 83, 101);
+
+left: 3cm;}
+
+#imageLogin
+{position: absolute;
+width: 10cm;
+height: 14cm;
+left: 10cm;
+margin-top: 4cm;
+background-image:url('./images/loginn.avif');
+background-size: auto;
+background-repeat: no-repeat;
+background-size: 100%;
+
+border: 1px solid beige;
+border-radius: 33px;
+:hover{animation: shake 0.5s  infinite}
+@keyframes shake 
+{
+    0%{transform: translate(1px,1px) rotate(0deg);}
+    10%{transform: translate(-1px,2px) rotate(-1deg);}
+    20%{transform: translate(1px,1px) rotate(0deg);} 
+     30%{transform: translate(1px,1px) rotate(0deg);}
+     40%{transform: translate(1px,1px) rotate(0deg);}
+     50%{transform: translate(1px,1px) rotate(0deg);}
+     60%{transform: translate(1px,1px) rotate(0deg);}
+     70%{transform: translate(1px,1px) rotate(0deg);}
+     80%{transform: translate(1px,1px) rotate(0deg);}
+     90%{transform: translate(1px,1px) rotate(0deg);}
+     100%{transform: translate(1px,1px) rotate(0deg);}
+    
+}}   
+
+

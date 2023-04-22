@@ -69,6 +69,7 @@
             },
             "development": {
               "browserTarget": "web:build:development"
+
             }
           },
           "defaultConfiguration": "development"
@@ -100,5 +101,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
