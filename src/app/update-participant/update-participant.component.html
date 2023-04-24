@@ -1,0 +1,37 @@
+<h1>Modifier un participant</h1>
+<form (ngSubmit)="onSubmit()" >
+    <div >
+        <label class="">nom</label>
+         <input type="text" placeholder="nom" name="nom" [(ngModel)]="formData.nom"><br>
+    </div>
+    <div>
+        <label>prenom</label>
+        <input type="text" placeholder="prenom" name="prenom" [(ngModel)]="formData.prenom">
+    </div><br>
+    <div>
+        <label>mail</label>
+        <input type="email" placeholder="Email" name="mail" [(ngModel)]="formData.mail">
+    </div><br>
+    <div>
+        <label>telephone</label>
+        <input type="tel" placeholder="telephone" name="phoneNumber" [(ngModel)]="formData.phoneNumber">
+    </div>
+    <label>Niveau</label>
+    <select name="niveau" id="niveau" [(ngModel)]="formData.niveau">
+        <option value="PremiereCyle">Premiere annee Cycle ingenieur</option>
+        <option value="DeuxiemeCyle">Deuxieme annee Cycle ingenieur</option>
+        <option value="TroisiemeCyle">Troisieme annee Cycle ingenieur</option>
+        <option value="PremiereMaster">PremiereMaster</option>
+        <option value="DeuxiemeMaster">DeuxiemeMaster</option>
+      </select><br>
+      <label>Section</label>
+      <select name="section" id="section" [(ngModel)]="formData.section">
+        <option value="Gsil">Gsil</option>
+        <option value="Informatique">Informatique</option>
+        <option value="Infotronique">Infotronique</option>
+        <option value="Mecatronique">Mecatronique</option>
+      </select>
+    <div>
+        <button >Modifier</button>
+    </div>
+</form>

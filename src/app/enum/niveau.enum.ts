@@ -1,8 +1,8 @@
 export enum Niveau{
 
-    PremiereCyle='PreierCycle',
-    DeuxiemeCyle='DeuxiemeCyle',
-    TroisiemeCyle='TroisiemeCyle',
+    PremiereCycle='PreierCycle',
+    DeuxiemeCycle='DeuxiemeCycle',
+    TroisiemeCycle='TroisiemeCycle',
     PremiereMaster='PremiereMaster',
     DeuxiemeMaster='DeuxiemeMaster',
 }

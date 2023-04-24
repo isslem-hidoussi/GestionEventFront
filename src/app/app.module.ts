@@ -13,6 +13,9 @@ import { AllEventComponent } from './all-event/all-event.component';
 import { FormsModule } from '@angular/forms';
 import { UpdateEventComponent } from './update-event/update-event.component';
 import { AddOrganisateurComponent } from './add-organisateur/add-organisateur.component';
+import { AddParticipantComponent } from './add-participant/add-participant.component';
+import { UpdateParticipantComponent } from './update-participant/update-participant.component';
+import { UpdateOrganisateurComponent } from './update-organisateur/update-organisateur.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { AddOrganisateurComponent } from './add-organisateur/add-organisateur.co
     AddEventComponent,
     AllEventComponent,
     UpdateEventComponent,
-    AddOrganisateurComponent
+    AddOrganisateurComponent,
+    AddParticipantComponent,
+    UpdateParticipantComponent,
+    UpdateOrganisateurComponent
   ],
   imports: [
     BrowserModule,
