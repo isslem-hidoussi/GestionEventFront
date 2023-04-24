@@ -1,0 +1,33 @@
+<h2>Liste des evenement:</h2>
+<table class="" border=1 frame=void >
+
+    <thead>
+        <tr>
+            
+            <th>libelle</th>
+            <th>date</th>
+            <th>nombreMaxParticipants</th>
+            <th>lieux</th>
+            <th>type</th>
+            <th>Modifier</th>
+            <th>Supprimer</th>
+            
+           
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let event of eventsInterface">
+          
+           <td>{{event.libelle}}</td>
+           <td>{{event.date}}</td>
+           <td>{{event.nbMaxParticipants}}</td>
+           <td>{{event.lieux}}</td>
+           <td>{{event.type}}</td>
+           <td>
+           <button >Modifier</button></td>
+           <td>
+           <button  (click)="onDelete(event.id)">Supprimer</button></td>
+
+        </tr>
+    </tbody>
+</table>

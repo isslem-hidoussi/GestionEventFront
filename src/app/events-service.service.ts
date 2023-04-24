@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { EventInterface } from './interface/eventInterface';
+
 
 @Injectable({
   providedIn: 'root'
@@ -32,12 +34,32 @@ export class EventsServiceService {
    }
    DeleteOrganisateurFromEventById(id:number,idOrganisateur:number):Observable<any>
    {
-    return this.http.delete<any>(`http://localhost:8081/Events/${id}/organisateur/${idOrganisateur}`)
+    return this.http.delete(`http://localhost:8081/Events/${id}/organisateur/${idOrganisateur}`)
    }
-   DeleteParticipantFromEvent(id:number,idParticipant:number):Observable<any>
+  
 
+  AddEvent(event:Partial<EventInterface>):Observable<any>
   {
-    return this.http.delete<any>(`http://localhost:8081/Events/${id}/participant/${id}`)
+    return this.http.post("http://localhost:8081/Events/add-event",event)
   }
- 
-   }
+  updateEvent(event:Partial<EventInterface>):Observable<any>
+  {
+    return this.http.put("http://localhost:8081/Events/",event)
+  }
+  AddOrganisateurToEvent(event:Partial<EventInterface>,id:number,idOrganisateur:number):Observable<any>
+{
+  return this.http.put(`localhost:8081/Events/${id}/organisateur/${idOrganisateur}`,null);
+
+}  
+
+AddparticipantToEvent(id:number,idParticipant:number):Observable<any>
+{
+  return this.http.put(`localhost:8081/Events/${id}/participant/${idParticipant}`,null)
+}
+
+DeleteParticipantFromEvent(id:Number,idParticipant:Number):Observable<any>
+{
+  return this.http.delete(`http://localhost:8081/Events/${id}/participant/${idParticipant}`);
+}
+
+}

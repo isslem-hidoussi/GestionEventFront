@@ -9,6 +9,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AdminEventComponent } from './admin-event/admin-event.component';
 import { AddEventComponent } from './add-event/add-event.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AllEventComponent } from './all-event/all-event.component';
+import { FormsModule } from '@angular/forms';
+import { UpdateEventComponent } from './update-event/update-event.component';
+import { AddOrganisateurComponent } from './add-organisateur/add-organisateur.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +21,16 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     NavbarComponent,
     AdminEventComponent,
-    AddEventComponent
+    AddEventComponent,
+    AllEventComponent,
+    UpdateEventComponent,
+    AddOrganisateurComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
