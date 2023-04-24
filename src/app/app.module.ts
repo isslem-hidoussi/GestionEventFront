@@ -16,6 +16,9 @@ import { AddOrganisateurComponent } from './add-organisateur/add-organisateur.co
 import { AddParticipantComponent } from './add-participant/add-participant.component';
 import { UpdateParticipantComponent } from './update-participant/update-participant.component';
 import { UpdateOrganisateurComponent } from './update-organisateur/update-organisateur.component';
+import { AdminPageComponent } from './admin-page/admin-page.component';
+import { UserPageComponent } from './user-page/user-page.component';
+import { OrganisateurPageComponent } from './organisateur-page/organisateur-page.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { UpdateOrganisateurComponent } from './update-organisateur/update-organi
     AddOrganisateurComponent,
     AddParticipantComponent,
     UpdateParticipantComponent,
-    UpdateOrganisateurComponent
+    UpdateOrganisateurComponent,
+    AdminPageComponent,
+    UserPageComponent,
+    OrganisateurPageComponent
   ],
   imports: [
     BrowserModule,

@@ -65,10 +65,12 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "web:build:production"
+              "browserTarget": "web:build:production",
+              "port": 5000
             },
             "development": {
-              "browserTarget": "web:build:development"
+              "browserTarget": "web:build:development",
+              "port": 5000
 
             }
           },

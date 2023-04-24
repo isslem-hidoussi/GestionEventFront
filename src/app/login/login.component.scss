@@ -42,11 +42,11 @@ background-size: 100%;
 border: 1px solid beige;
 border-radius: 33px;
 :hover{animation: shake 0.5s  infinite}
-@keyframes shake 
+@keyframes shake
 {
     0%{transform: translate(1px,1px) rotate(0deg);}
     10%{transform: translate(-1px,2px) rotate(-1deg);}
-    20%{transform: translate(1px,1px) rotate(0deg);} 
+    20%{transform: translate(1px,1px) rotate(0deg);}
      30%{transform: translate(1px,1px) rotate(0deg);}
      40%{transform: translate(1px,1px) rotate(0deg);}
      50%{transform: translate(1px,1px) rotate(0deg);}
@@ -55,7 +55,7 @@ border-radius: 33px;
      80%{transform: translate(1px,1px) rotate(0deg);}
      90%{transform: translate(1px,1px) rotate(0deg);}
      100%{transform: translate(1px,1px) rotate(0deg);}
-    
-}}   
+
+}}
 
 
