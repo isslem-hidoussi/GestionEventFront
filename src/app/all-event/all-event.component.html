@@ -1,31 +1,59 @@
-<h2>Liste des evenement:</h2>
-<table class="" border=1 frame=void>
-  <thead>
-  <tr>
-    <th>libelle</th>
-    <th>date</th>
-    <th>nombreMaxParticipants</th>
-    <th>lieux</th>
-    <th>type</th>
-    <th>Modifier</th>
-    <th>Supprimer</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr *ngFor="let event of eventsInterface">
+<div class="flex flex-col items-center justify-center">
+  <h2 class=" text-3xl text-center my-4 font-bold">Liste des evenement:</h2>
 
-    <td>{{event.libelle}}</td>
-    <td>{{event.date}}</td>
-    <td>{{event.nbMaxParticipants}}</td>
-    <td>{{event.lieux}}</td>
-    <td>{{event.type}}</td>
-    <td>
-      <button><a routerLink="/edit-event/{{event.id}}">Modifier</a></button>
-    </td>
-    <td>
-      <button (click)="onDelete(event.id)">Supprimer</button>
-    </td>
+  <table class="border-collapse border border-pink-500 mt-5 mx-auto center">
+    <thead>
+    <tr class="bg-pink-400 text-white">
+      <th class="px-4 py-2">libelle</th>
+      <th class="px-4 py-2">date</th>
+      <th class="px-4 py-2">Nombre Max de Participants</th>
+      <th class="px-4 py-2">lieux</th>
+      <th class="px-4 py-2">type</th>
+      <th class="px-4 py-2" *ngIf="role === 'admin'">Modifier</th>
+      <th class="px-4 py-2" *ngIf="role === 'admin'">Supprimer</th>
+      <th class="px-4 py-2" *ngIf="role === 'participant'">Participer</th>
+      <th class="px-4 py-2" *ngIf="role === 'organisateur'">Organiser</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="bg-pink-100" *ngFor="let event of eventsInterface">
+      <td class="px-4 py-2 border border-pink-500">{{event.libelle}}</td>
+      <td class="px-4 py-2 border border-pink-500">{{event.date}}</td>
+      <td class="px-4 py-2 border border-pink-500">{{event.nbMaxParticipants}}</td>
+      <td class="px-4 py-2 border border-pink-500">{{event.lieux}}</td>
+      <td class="px-4 py-2 border border-pink-500">{{event.type}}</td>
+      <td class="px-4 py-2 border border-pink-500" *ngIf="role === 'admin'">
+        <button
+          class="shadow bg-purple-500 hover:bg-purple-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded">
+          <a routerLink="/admin/edit-event/{{event.id}}">Modifier</a></button>
+      </td>
+      <td class="px-4 py-2 border border-pink-500" *ngIf="role === 'participant'">
+        <button
+          class="shadow bg-purple-500 hover:bg-purple-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+          (click)="onParticiper(event.id)">
+          Participer
+        </button>
+      </td>
+      <td class="px-4 py-2 border border-pink-500" *ngIf="role === 'organisateur'">
+        <button
+          class="shadow bg-purple-500 hover:bg-purple-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+          (click)="onOrganiser(event.id)"
+        >
+          Organiser
+        </button>
+      </td>
+      <td class="px-4 py-2 border border-pink-500" *ngIf="role === 'admin'">
+        <button
+          class="shadow bg-red-500 hover:bg-red-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+          (click)="onDelete(event.id)">Supprimer
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <button *ngIf="role === 'admin'"
+          class="shadow bg-pink-500 hover:bg-pink-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded mx-auto my-4"
+          routerLink="/admin/add-event">Ajouter Un Evenement
+  </button>
 
-  </tr>
-  </tbody>
-</table>
+</div>

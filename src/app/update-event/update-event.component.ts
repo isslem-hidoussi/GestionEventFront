@@ -24,9 +24,12 @@ export class UpdateEventComponent implements OnInit {
 
   onSubmit(): void {
 
-    this.eventService.updateEvent(this.formData).subscribe(response => alert('evenement modifié avec success!'), error => alert("echec de modification"));
+    this.eventService.updateEvent(this.formData).subscribe(response => {
+      alert('evenement modifié avec success!');
+      this.eventService.getEventById(this.eventId).subscribe(response => this.formData = response);
+    }, error => alert("echec de modification"));
     console.log(this.formData)
-    this.eventService.getEventById(this.eventId).subscribe(response => this.formData = response);
+
   }
 
 

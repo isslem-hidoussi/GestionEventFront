@@ -1,15 +1,16 @@
-<div >
-<div id="imageLogin">
+<div>
+  <div id="imageLogin">
   </div>
 
-<div id="form">
+  <div id="form">
 
-    <form >
+    <form (ngSubmit)="onSubmit()">
       <h1>Log in</h1>
 
-      <input type="email" placeholder="Username" class="input"><br>
-      <input type="password" placeholder="Password" class="input" /><br>
-      <button type="submit" id="button-Login">Login</button><br>
+      <input type="email" placeholder="Username" class="input" name="username" [(ngModel)]="data.username"><br>
+      <input type="password" placeholder="Password" class="input" name="password" [(ngModel)]="data.password"/><br>
+      <button type="submit" id="button-Login">Login</button>
+      <br>
 
     </form>
   </div>
