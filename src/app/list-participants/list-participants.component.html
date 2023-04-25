@@ -1,0 +1,44 @@
+<div class="flex flex-col items-center justify-center">
+  <h2 class=" text-3xl text-center my-4 font-bold">Liste des participants:</h2>
+
+  <table class="border-collapse border border-pink-500 mt-5 mx-auto center">
+    <thead>
+    <tr class="bg-pink-400 text-white">
+      <th class="px-4 py-2">nom</th>
+      <th class="px-4 py-2">prenom</th>
+      <th class="px-4 py-2">Mail</th>
+      <th class="px-4 py-2">Telephone</th>
+      <th class="px-4 py-2">Niveau</th>
+      <th class="px-4 py-2">Section</th>
+      <th class="px-4 py-2">Modifier</th>
+      <th class="px-4 py-2">Supprimer</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="bg-pink-100" *ngFor="let participant of participantsInterface">
+      <td class="px-4 py-2 border border-pink-500">{{participant.nom}}</td>
+      <td class="px-4 py-2 border border-pink-500">{{participant.prenom}}</td>
+      <td class="px-4 py-2 border border-pink-500">{{participant.mail}}</td>
+      <td class="px-4 py-2 border border-pink-500">{{participant.phoneNumber}}</td>
+      <td class="px-4 py-2 border border-pink-500">{{participant.niveau}}</td>
+      <td class="px-4 py-2 border border-pink-500">{{participant.section}}</td>
+      <td class="px-4 py-2 border border-pink-500">
+        <button
+          class="shadow bg-purple-500 hover:bg-purple-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded">
+          <a routerLink="/admin/edit-participant/{{participant.id}}">Modifier</a></button>
+      </td>
+      <td class="px-4 py-2 border border-pink-500">
+        <button
+          class="shadow bg-red-500 hover:bg-red-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+          (click)="onDelete(participant.id)">Supprimer
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <button
+    class="shadow bg-pink-500 hover:bg-pink-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded mx-auto my-4"
+    routerLink="/admin/add-participant">Ajouter Un Participant
+  </button>
+
+</div>

@@ -1,0 +1,24 @@
+<div class="flex flex-col items-center justify-center">
+  <h2 class=" text-3xl text-center my-4 font-bold">Liste des evenement:</h2>
+
+  <table class="border-collapse border border-pink-500 mt-5 mx-auto center">
+    <thead>
+    <tr class="bg-pink-400 text-white">
+      <th class="px-4 py-2">libelle</th>
+      <th class="px-4 py-2">date</th>
+      <th class="px-4 py-2">Nombre Max de Participants</th>
+      <th class="px-4 py-2">lieux</th>
+      <th class="px-4 py-2">type</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="bg-pink-100" *ngFor="let event of eventList">
+      <td class="px-4 py-2 border border-pink-500">{{event.libelle}}</td>
+      <td class="px-4 py-2 border border-pink-500">{{event.date}}</td>
+      <td class="px-4 py-2 border border-pink-500">{{event.nbMaxParticipants}}</td>
+      <td class="px-4 py-2 border border-pink-500">{{event.lieux}}</td>
+      <td class="px-4 py-2 border border-pink-500">{{event.type}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
